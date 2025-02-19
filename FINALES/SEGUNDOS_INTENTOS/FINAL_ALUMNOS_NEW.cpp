@@ -130,7 +130,7 @@ public:
 		return plan->aprobo(notas);
 	}
 	void setplan(Plan* p){
-		delete plan;
+/*		delete plan;*/
 		plan = p;
 	}
 };
@@ -325,6 +325,7 @@ int main(int argc, char *argv[]) {
 	Alumno* alumno1 = new Alumno(1, "Juan", invitado);
 	Alumno* alumno2 = new Alumno(2, "Maria", medio);
 	Alumno* alumno3 = new Alumno(3, "Pedro", premium);
+	Alumno* alumno4 = new Alumno(4, "PIPINA", invitado);
 	
 	// Asignar notas a los alumnos
 	alumno1->agregarnota(99);
@@ -336,6 +337,7 @@ int main(int argc, char *argv[]) {
 	alumno3->agregarnota(99);
 	alumno3->agregarnota(99);
 	alumno3->agregarnota(99);
+	alumno4->agregarnota(100);
 	
 	// Crear algunos cursos
 	Curso* curso1 = new Curso(1, "Matematicas");
@@ -345,6 +347,7 @@ int main(int argc, char *argv[]) {
 	curso1->pushalumno(alumno1);
 	curso1->pushalumno(alumno2);
 	curso2->pushalumno(alumno3);
+	curso2->pushalumno(alumno4);
 	
 	// Crear el gestor de cursos
 	Gestor gestor;
