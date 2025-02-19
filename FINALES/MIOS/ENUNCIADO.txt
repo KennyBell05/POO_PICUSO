@@ -1,0 +1,14 @@
+El restaurant "Paraná" nos contrata para hacer un software que controle los costos de sus platos. Los platos están compuestos por ingredientes los cuales pueden ser platos o ingredientes básicos. 
+Por ejemplo los panqueques con dulce de leche, está compuesto por panqueques (que es un plato) y dulce de leche que es un ingrediente básico. 
+El software debe mantener el costo de cada uno de los platos, y el costo está dado por la suma de los costos de los ingredientes (básicos o platos). 
+
+1. (25) Realice el diseño de la solución e implemente las clases. Conteste: Se puede utilizar polimorfismo, cual es la ventaja o desventaja? 
+2. (25) Diseñe una estructura de archivos y realice los métodos necesarios para guardar los platos con sus ingredientes. 
+3. (20) Dado un vector (de stl) con los platos realice las siguientes metodos, en la clase que crea conveniente: 
+a. Ordenar los platos por menor costo. 
+b. Guardar el top 5 de platos más baratos en un archivo de texto. Con el siguiente formato: nombre del plato: costo 
+c. Guardar en un archivo de texto los platos que no contengan harina. 
+4. (12) Defina los siguientes conceptos: Herencia, composición y reutilización de código. En que se relacionan? 
+
+Libre: El restaurante lo contrata nuevamente para modificar el software anterior, ahora el costo no solo está dado por los ingredientes sino por otros items como impuestos o mano de obra. 
+En el caso de los impuestos es un monto fijo, pero la mano de obra depende del tiempo de elaboración por el monto de la hora del empleado. Realice un diseño de clases y de archivos.
