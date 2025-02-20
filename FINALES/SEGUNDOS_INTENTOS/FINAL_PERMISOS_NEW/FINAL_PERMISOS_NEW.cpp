@@ -15,6 +15,7 @@ public:
 		id = i;
 		strcpy(nombre, n);
 	}
+	virtual ~Cargo(){}
 	void pushpermiso(const char* p){
 		permisos_cargo.push_back(p);
 	}
@@ -141,6 +142,24 @@ public:
 				}
 			}
 		}
+	}
+	bool saberpermiso(int id, const char* permiso){
+		if (usuarios.empty() || cargos.empty()){
+			return{};
+		}
+		for (const auto& u : usuarios){
+			if (u->getid() == id){ /// USER ENCONTRADO
+				cout << "ENCONTRADO" << endl;
+				for (const auto& c : u->getcargos()){
+					for (const auto& p : c->getpermisos()){
+						if (strcmp(permiso, p) == 0){
+							return true; /// PERMISO ENCONTRADO
+						}
+					}
+				}
+			}
+		}
+		return false; /// NO ENCONTRADO
 	}
 };
 
